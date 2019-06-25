@@ -22,9 +22,9 @@ it('should expect a guess', function() {
   });  
 
 it('should expect a card object', function() {
-    const turn = new Turn('My guess', Card);
     const card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-    expect(turn.card).to.equal(Card);
+    const turn = new Turn('My guess', card);
+    expect(turn.card).to.equal(card);
   });  
 
 it('should be able to return the guess', function() {
@@ -35,8 +35,8 @@ it('should be able to return the guess', function() {
 
 it('should be able to return the card', function() {
   const card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-  const turn = new Turn('This guess', Card);
-  expect(turn.returnCard()).to.equal(Card)
+  const turn = new Turn('This guess', card);
+  expect(turn.returnCard()).to.equal(card)
 });
 
 it('should be able to evaluate the guess', function() {
@@ -54,13 +54,11 @@ it('should be able to evaluate the guess', function() {
 it('should be able to provide feedback on the guess', function() {
   const card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
   const turn2 = new Turn('some answer', card);
+  const turn1 = new Turn('object', card);
 
-  turn2.evaluateGuess()
   turn2.giveFeedback()
   expect(turn2.giveFeedback()).to.equal("Keep trying...");
-  
-  const turn1 = new Turn('object', card);
-  turn1.evaluateGuess()
+
   turn1.giveFeedback()
   expect(turn1.giveFeedback()).to.equal("Great work!");
 
