@@ -1,3 +1,5 @@
+const data = require('./data');
+
 class Card {
   constructor(obj = {}) {
     this.id = obj.id;

@@ -1,3 +1,4 @@
+const data = require('./data');
 const Turn = require('../src/Turn');
 
 class Round {
