@@ -44,9 +44,9 @@ it('should be able to evaluate the guess', function() {
   const turn1 = new Turn('object', card);
   const turn2 = new Turn('something else', card);
 
-  turn1.evaluateGuess()
+  // turn1.evaluateGuess()
   expect(turn1.evaluateGuess()).to.equal(true);
-  turn2.evaluateGuess()
+  // turn2.evaluateGuess()
   expect(turn2.evaluateGuess()).to.equal(false);
 
 });

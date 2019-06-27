@@ -26,12 +26,12 @@ class Game {
   deckBuilder() {
     let currentDeck = new Deck(prototypeQuestions.map((card) => {
     return new Card(card)
-    }))
-    this.deck = currentDeck
+    }));
+    this.deck = currentDeck;
   };
 
   roundBuilder() {
-    this.currentRound = new Round(this.deck)
+    this.currentRound = new Round(this.deck);
   };
 
   printMessage(deck, round) {
