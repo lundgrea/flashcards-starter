@@ -6,8 +6,8 @@ const Card = require('../src/Card');
 var card;
 
 beforeEach(() => {
-   card = new Card({id: 1, question: 'What allows you to define a set of related information using key-value pairs?', answers: ['object', 'array', 'function'], correctAnswer: 'object'});
-  });
+  card = new Card({id: 1, question: 'What allows you to define a set of related information using key-value pairs?', answers: ['object', 'array', 'function'], correctAnswer: 'object'});
+});
 
 describe('Card', function() {
 

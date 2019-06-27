@@ -12,15 +12,14 @@ describe('Game', function() {
   it('should be a function', function() {
     const game = new Game();
     expect(Game).to.be.a('function');
-  });
-
-  it('should start with the current round as 0', function(){
-    const game = new Game();
-    game.start()
-    expect(game.currentRound.turn).to.equal(0)
   })
 
-it('should keep track of the current round', function(){
+  it('should start with the current round as 0', function() {
+    const game = new Game();
+    expect(game.roundTracker).to.equal(0)
+  })
+
+  it('should keep track of the current round', function() {
     const game = new Game();
     game.start();
     expect(game.roundTracker).to.equal(1);
@@ -28,7 +27,7 @@ it('should keep track of the current round', function(){
     expect(game.roundTracker).to.equal(2);
   })
 
- it('should have a deck of cards', function(){
+  it('should have a deck of cards', function() {
     const game = new Game();
     game.start();
     expect(game.deck.cardDeck.length).to.equal(30)

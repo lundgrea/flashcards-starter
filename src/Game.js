@@ -21,27 +21,27 @@ class Game {
     this.printMessage(this.deck, this.currentRound);
     this.printQuestion(this.currentRound);
     this.roundTracker ++
-  };
+  }
 
   deckBuilder() {
     let currentDeck = new Deck(prototypeQuestions.map((card) => {
-    return new Card(card)
+      return new Card(card)
     }));
     this.deck = currentDeck;
-  };
+  }
 
   roundBuilder() {
     this.currentRound = new Round(this.deck);
-  };
+  }
 
   printMessage(deck, round) {
-      console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.
+    console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.
 -----------------------------------------------------------------------`)
-  };
+  }
 
   printQuestion(round) {
-      util.main(round);
-  };
+    util.main(round);
+  }
 }
 
 module.exports = Game;
