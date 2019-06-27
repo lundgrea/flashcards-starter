@@ -9,7 +9,7 @@ Abstract at the top (A sentence or two describing the project)
 
 A GIF of the working application
 
-![flash cards example gif](https://media.giphy.com/media/1zkb1q58eTiTH6D7wc/giphy.gif)
+![flash cards example gif](assets/flashcards.gif)
 
 
 
