@@ -32,4 +32,5 @@ describe('Card', function() {
   it('should store the correct answer', function() {
     expect(card.correctAnswer).to.equal('object');
   });
+  
 });

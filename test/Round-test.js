@@ -66,15 +66,15 @@ describe('Round', function() {
     expect(round.turn).to.equal(2)
   });
   
-  it('should add incorrect guesses to a list of incorrect guesses', function  () {
+  it('should add incorrect guesses to a list of incorrect guesses', function() {
     const deck = new Deck([card1, card2, card3]);
     const round = new Round(deck);
     round.takeTurn('capybara');
     round.takeTurn('spleen');
-    expect(round.incorrectGuesses).to.eql([1, 14])
+    expect(round.incorrectGuesses).to.eql([1, 14]);
   });
   
-  it('should make the next card the current card after every turn', function  () {
+  it('should make the next card the current card after every turn', function() {
     const deck = new Deck([card1, card2, card3]);
     const round = new Round(deck);
     round.takeTurn('capybara');
@@ -83,22 +83,22 @@ describe('Round', function() {
     expect(round.returnCurrentCard()).to.equal(card3);
   });
   
-  it('should tell your the percentage correct of right answers', function()   {
+  it('should tell your the percentage correct of right answers', function() {
     const deck = new Deck([card1, card2, card3]);
     const round = new Round(deck);
     round.takeTurn('capybara');
     round.takeTurn('gallbladder');
-    round.takeTurn('listening to music')
+    round.takeTurn('listening to music');
     expect(round.calculatePercentCorrect()).to.equal(33);
-  })
+  });
   
   it('should tell you when the round is over and provide a percentage of questions correct', function() { 
     const deck = new Deck([card1, card2, card3]);
     const round = new Round(deck);
     round.takeTurn('capybara');
     round.takeTurn('gallbladder');
-    round.takeTurn('listening to music')
+    round.takeTurn('listening to music');
     expect(round.endRound(33)).to.equal('** Round over! ** You answered 33% of the questions correctly!');
-  })
+  });
 
-});
+})

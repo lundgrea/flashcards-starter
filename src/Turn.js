@@ -3,7 +3,7 @@ const data = require('./data');
 class Turn {
   constructor(guess, card) {
     this.guess = guess;
-    this.card = card
+    this.card = card;
   }
 
   returnGuess(guess) {
@@ -16,17 +16,17 @@ class Turn {
 
   evaluateGuess() {
     if (this.guess === this.card.correctAnswer) {
-      return true
+      return true;
     } else  {
-      return false
+      return false;
     }
   }
 
   giveFeedback() {
     if (this.evaluateGuess() === true) {
-      return "Great work!"
+      return "Great work!";
     } else {
-      return "Keep trying..."
+      return "Keep trying...";
     }
   }
 }

@@ -7,7 +7,6 @@ const Turn = require('../src/Turn');
 const Card = require('../src/Card');
 const Deck = require('../src/Deck');
 
-
 class Game {
   constructor() {
     this.currentRound;
@@ -20,12 +19,12 @@ class Game {
     this.roundBuilder();
     this.printMessage(this.deck, this.currentRound);
     this.printQuestion(this.currentRound);
-    this.roundTracker ++
+    this.roundTracker ++;
   }
 
   deckBuilder() {
     let currentDeck = new Deck(prototypeQuestions.map((card) => {
-      return new Card(card)
+      return new Card(card);
     }));
     this.deck = currentDeck;
   }
